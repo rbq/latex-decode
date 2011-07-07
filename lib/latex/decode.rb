@@ -6,7 +6,7 @@ module LaTeX
   class << self
     def decode (string)
       string.gsub!(pattern) { |k| substitutions[k] }
-      string.gsub(/{(\S)}/, '\\1')
+      string.gsub(/\{(\S)\}/, '\\1')
     end
 
     def pattern
