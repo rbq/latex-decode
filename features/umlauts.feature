@@ -9,3 +9,7 @@ Feature: Decode LaTeX umlauts
   Scenario: Uppercase german umlauts
     When I decode the string '\"A\"O\"U'
     Then the result should be 'ÄÖÜ'
+
+  Scenario: German esszett
+    When I decode the string '\ss'
+    Then the result should be 'ß'
